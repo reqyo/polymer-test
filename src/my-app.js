@@ -36,7 +36,7 @@ class MyApp extends PolymerElement {
     return html`
       <style>
         :host {
-          --app-primary-color: #4285f4;
+          --app-primary-color: #F5F5F5;
           --app-secondary-color: black;
 
           display: block;
@@ -81,22 +81,16 @@ class MyApp extends PolymerElement {
 
       <app-drawer-layout fullbleed="" narrow="{{narrow}}">
         <!-- Drawer content -->
-        <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
-          <app-toolbar>Menu</app-toolbar>
-          <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-            <a name="view1" href="[[rootPath]]view1">View One</a>
-            <a name="view2" href="[[rootPath]]view2">View Two</a>
-            <a name="view3" href="[[rootPath]]view3">View Three</a>
-          </iron-selector>
-        </app-drawer>
+
 
         <!-- Main content -->
         <app-header-layout has-scrolling-region="">
 
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
-              <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
-              <div main-title="">My App</div>
+              <paper-icon-button icon="my-icons:landing-page" drawer-toggle=""></paper-icon-button>
+              <img src="https://d1re4mvb3lawey.cloudfront.net/images/logo-short.svg" alt="Bibliotech logo" >
+              <div main-title="">Book</div>
             </app-toolbar>
           </app-header>
 
