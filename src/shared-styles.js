@@ -68,12 +68,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         }
 
       table {
+        display: block;
         float: left;
         white-space: pre;
         overflow: auto;
         border-collapse: collapse;
         width: auto;
         height: auto;
+        
         
       }
 
@@ -126,6 +128,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         padding-right: 10px;
         padding-left: 10px;
       }
+
+
 
         .titleContents{
           width: 100%;

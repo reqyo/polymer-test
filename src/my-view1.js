@@ -37,13 +37,12 @@ class MyView1 extends PolymerElement {
       <h1 class="bookname">{{title}}</h1>
         <table>
         <tr>
-        <thead style="text-align: center; margin-right: auto; margin-left: auto;">
         <th>First</th>
         <th>Number</th>
         <th>File</th>
         </tr>
 
-        </thead>
+        
         <tbody>
         <template is="dom-repeat" items="{{response.toc}}">
 
