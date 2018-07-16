@@ -15,31 +15,111 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
   <template>
     <style>
       .card {
-        margin: 24px;
-        padding: 16px;
+          display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 24px;
+        width: 80%;
         color: #757575;
         border-radius: 5px;
         background-color: #fff;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
       }
 
-      .circle {
-        display: inline-block;
-        width: 64px;
-        height: 64px;
-        text-align: center;
-        color: #555;
-        border-radius: 50%;
-        background: #ddd;
-        font-size: 30px;
-        line-height: 64px;
+      .bookname{
+        color: #8868F0;
       }
+
+      .titleContents{
+        width: 65%;
+        float: right;
+      }
+
+      span {
+        font-size: 1.5vmin;
+
+      }
+
+      .imageAuthor{
+        width: 45%;
+      }
+
 
       h1 {
         margin: 16px 0;
         color: #212121;
-        font-size: 22px;
+        font-size: 18px;
+        
+        display: block;
       }
+
+
+      h2 {
+      font-size: 18px;
+      display: block;
+      margin: 0;
+      }
+
+
+      h3 {
+        font-size: 18px;
+        display: inline-block;
+        margin: 0;
+        }
+
+      table {
+        float: left;
+        white-space: pre;
+        overflow: auto;
+        border-collapse: collapse;
+        width: auto;
+        height: auto;
+        
+      }
+
+      tr{
+        white-space: normal;
+        width: inherit;
+        overflow: auto;
+      }
+
+      th{
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      td{
+        padding-right: 10px;
+        padding-left: 10px;
+        white-space: normal;
+        width: inherit;
+        overflow: auto;
+
+      }
+
+      @media only screen and (max-width: 932px){
+
+        .card{
+          width: 90%
+        }
+
+      }
+
+      @media only screen and (max-width: 800px){
+        .imageAuthor{
+          width: 100%;
+        }
+
+        .titleContents{
+          width: 100%;
+          float: left;
+          margin-bottom: 20px;
+        }
+
+      }
+
+
+      
     </style>
   </template>
 </dom-module>`;

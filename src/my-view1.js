@@ -22,16 +22,56 @@ class MyView1 extends PolymerElement {
         }
       </style>
 
-      <iron-image style="display: block;" src="https://d1re4mvb3lawey.cloudfront.net/pg1017/cover.jpg"></iron-image>
+
+      <iron-ajax
+    auto
+    url="index.json"
+    handle-as="json"
+    on-response="handleResponse"
+    last-response="{{response}}"></iron-ajax>
 
       <div class="card">
-        <div class="circle">1</div>
+      
 
-        <h1>View One</h1>
-        <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
-        <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+      <div class="titleContents">
+      <h1 class="bookname">{{title}}</h1>
+        <table>
+        <tr>
+        <thead style="text-align: center; margin-right: auto; margin-left: auto;">
+        <th>First</th>
+        <th>Number</th>
+        <th>File</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <template is="dom-repeat" items="{{response.toc}}">
+
+    <tr> <td>{{item.first}} </td>
+    <td> {{item.num}} </td>
+    <td> <span>{{item.file}}</span> </td></tr>
+
+</template>
+</tbody>
+</table>
+</div>
+<div class="imageAuthor">
+<iron-image style="" src="https://d1re4mvb3lawey.cloudfront.net/pg1017/cover.jpg"> alt="{{title}}"</iron-image>
+        <template is="dom-repeat" items="{{response.contributors}}">
+        <h2>{{item}}</h2>
+        </template>
+        <h3>Year of Publication: {{date}}</h3>
+</div>
+
       </div>
     `;
+  }
+
+  handleResponse(event, request) {
+    var response = request.response;
+    this.echo = JSON.stringify(response);
+    this.set('title', response.title);
+    this.set('date', response.date);
   }
 }
 

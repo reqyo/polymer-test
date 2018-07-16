@@ -19,6 +19,8 @@ import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import '@polymer/app-route/app-location.js';
 import '@polymer/app-route/app-route.js';
 import '@polymer/iron-pages/iron-pages.js';
+import '@polymer/iron-image/iron-image.js';
+import '@polymer/iron-ajax/iron-ajax.js';
 import '@polymer/iron-selector/iron-selector.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
 import './my-icons.js';
@@ -49,6 +51,7 @@ class MyApp extends PolymerElement {
         app-header {
           color: #fff;
           background-color: var(--app-primary-color);
+          padding: 0 19px;
         }
 
         app-header paper-icon-button {
@@ -88,9 +91,9 @@ class MyApp extends PolymerElement {
 
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
-              <paper-icon-button icon="my-icons:landing-page" drawer-toggle=""></paper-icon-button>
-              <img src="https://d1re4mvb3lawey.cloudfront.net/images/logo-short.svg" alt="Bibliotech logo" >
-              <div main-title="">Book</div>
+              
+              <iron-image src="https://d1re4mvb3lawey.cloudfront.net/images/logo-short.svg" alt="Bibliotech logo" >
+              <div main-title=""></div>
             </app-toolbar>
           </app-header>
 
@@ -135,9 +138,6 @@ class MyApp extends PolymerElement {
     }
 
     // Close a non-persistent drawer when the page & route are changed.
-    if (!this.$.drawer.persistent) {
-      this.$.drawer.close();
-    }
   }
 
   _pageChanged(page) {
