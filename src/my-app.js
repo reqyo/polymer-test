@@ -92,8 +92,9 @@ class MyApp extends PolymerElement {
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
               
-              <iron-image src="https://d1re4mvb3lawey.cloudfront.net/images/logo-short.svg" alt="Bibliotech logo" >
+              <iron-image src="https://d1re4mvb3lawey.cloudfront.net/images/logo-short.svg" alt="Bibliotech logo" ></iron-image>
               <div main-title=""></div>
+             
             </app-toolbar>
           </app-header>
 

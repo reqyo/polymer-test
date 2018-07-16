@@ -110,6 +110,23 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
           width: 100%;
         }
 
+        span {
+          font-size: 2vmin;
+  
+        }
+
+        td{
+          width: 20px;
+          padding-right: 2px;
+          padding-left: 2px;
+        }
+
+
+      th{
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
         .titleContents{
           width: 100%;
           float: left;
